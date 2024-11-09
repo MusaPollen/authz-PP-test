@@ -1,3 +1,6 @@
+import LoginButton from './login';
+import LogoutButton from './logout'
+import Profile from './profile'
 import logo from './logo.svg';
 import './App.css';
 
@@ -17,6 +20,9 @@ function App() {
         >
           Learn React
         </a>
+        <LoginButton />
+        <LogoutButton />
+        <Profile />
       </header>
     </div>
   );
