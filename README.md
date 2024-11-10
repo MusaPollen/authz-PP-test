@@ -1,3 +1,40 @@
+# Personal notes below
+### push message on 10112024
+* tried progressing profiling again
+* created an spa app in dashboard //to complete authentication flow
+* then created an api
+* created custom permission/scope in that api as per tutorial 
+```https://auth0.com/docs/customize/forms/configure-progressive-profile-form```
+though confused if these permissions was needed.
+* then went to m2m tab to check the automatically created m2m app for this api (myapiname(test application) )
+* then went to auth0 management api
+* went to m2m tab
+* found my automatically created m2m app of my api.
+* turned on / authorized this m2m app and enabled 6 permission as per guide link.
+* Then followed the guide.
+* was successful in implementing progressive profiling
+* in the spa app used the default flow - authorization code flow.
+``` 
+root.render(
+  <Auth0Provider
+    domain="dev-clkrligodugy76hh.us.auth0.com"
+    clientId="ibJydlYXpEkhmOCMoPr9cO8gw7p7zFmR" //
+    authorizationParams={{
+      redirect_uri: window.location.origin
+      // audience: "https://dev-clkrligodugy76hh.us.auth0.com/api/v2/",
+      // scope: "read:users update:users create:users read:users_app_metadata update:users_app_metadata create:users_app_metadata"
+    }}
+  >
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  </Auth0Provider>
+);
+```
+
+* XXXXXXXXXXXXXXXXX-----------Personal note complete-----------------XXXXXXXXXXXXX
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
